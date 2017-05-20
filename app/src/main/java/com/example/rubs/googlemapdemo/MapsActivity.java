@@ -60,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         list += address.get(0).getCountryName();
                         mMap.addMarker(new MarkerOptions().position(latLng).title(list).icon(BitmapDescriptorFactory.fromResource(R.drawable.icon)));
                         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                        mMap.animateCamera(CameraUpdateFactory.zoomTo(12));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
